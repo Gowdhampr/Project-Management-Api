@@ -65,14 +65,16 @@ function get(req, res, next) {
             }
 
             res.json({
-                id: projectDetails.id,
-                name: projectDetails.name,
-                description: projectDetails.description,
-                status: projectDetails.status,
-                technology: projectDetails.technology,
-                staffId: projectDetails.staff_id,
-                teamLeadId: projectDetails.team_lead_id,
-                createdAt: projectDetails.created_at,
+                projectDetails: {
+                    id: projectDetails.id,
+                    name: projectDetails.name,
+                    description: projectDetails.description,
+                    status: projectDetails.status,
+                    technology: projectDetails.technology,
+                    staffId: projectDetails.staff_id,
+                    teamLeadId: projectDetails.team_lead_id,
+                    createdAt: projectDetails.created_at,
+                }
             });
         })
         .catch((err) => {
