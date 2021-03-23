@@ -14,8 +14,8 @@ function get(req, res, next) {
                 "status",
                 "staff_id",
                 "team_lead_id",
-                "createdAt",
-                "updatedAt",
+                // "createdAt",
+                // "updatedAt",
             ],
             include:[
                 // {
@@ -30,32 +30,32 @@ function get(req, res, next) {
                 //         "updatedAt",
                 //     ],
                 // },
-                {
-                    required: false,
-                    model: TeamUser,
-                    as: "TeamUser",
-                    attributes: [
-                        "id",
-                        "user_id",
-                        "team_lead_id",
-                        "createdAt",
-                        "updatedAt",
-                    ],
-                    include:[
-                        {
-                            required: false,
-                            model: User,
-                            as: "teamMember",
-                            attributes: [
-                                "id",
-                                "first_name",
-                                "last_name",
-                                "createdAt",
-                                "updatedAt",
-                            ],
-                        },
-                    ]
-                },
+                // {
+                //     required: false,
+                //     model: TeamUser,
+                //     as: "teamUser",
+                //     attributes: [
+                //         "id",
+                //         "user_id",
+                //         "team_lead_id",
+                //         "createdAt",
+                //         "updatedAt",
+                //     ],
+                //     include:[
+                //         {
+                //             required: false,
+                //             model: User,
+                //             as: "teamMember",
+                //             attributes: [
+                //                 "id",
+                //                 "first_name",
+                //                 "last_name",
+                //                 "createdAt",
+                //                 "updatedAt",
+                //             ],
+                //         },
+                //     ]
+                // },
             ],
             where: { id }
         })

@@ -9,11 +9,15 @@ module.exports = (sequelize, DataTypes) => {
             primaryKey: true,
             autoIncrement: true
         },
-        project_id: {
+        // project_id: {
+        //     type: DataTypes.INTEGER,
+        //     allowNull: true
+        // },
+        user_id: {
             type: DataTypes.INTEGER,
             allowNull: true
         },
-        user_id: {
+        team_lead_id: {
             type: DataTypes.INTEGER,
             allowNull: true
         },
